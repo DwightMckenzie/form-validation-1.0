@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation 1.0</title>
+    <link rel="icon" type="image/png" href="dm_favicon.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Sign up today</h1>
+        <!-- form -->
+        <form id="form">
+            <!-- full name -->
+            <div class="form-group">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" placeholder="Fullname" required minlength="3" maxlength="100" name="name">
+            </div>
+            <!-- Phone Number -->
+            <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" placeholder="000-000-0000" required pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" name="phone">
+            </div>
+            <!-- email -->
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="tel" id="email" placeholder="email@address.com" required name="email">
+            </div>
+            <!-- web site -->
+            <div class="form-group">
+                <label for="website">Website</label>
+                <input type="url" id="website" placeholder="https://jacinto.design" required name="website">
+            </div>
+            <!-- password -->
+            <div class="form-group">
+                <label for="password1">Password</label>
+                <input type="password" id="password1" placeholder="Create Password" required pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{4,}$" title="Must Have: 4 characters, 1 Uppercase character, 1 lowercase character, and 1 number">
+            </div>
+            <!-- password confirm -->
+            <div class="form-group">
+                <label for="password2">Confirm Password</label>
+                <input type="password" id="password2" placeholder="Confirm Password" required pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{4,}$" title="Must Match the password" name="password">
+            </div>
+            <button type="submit">Register</button>
+        </form>
+        <!-- error/success message -->
+        <div class="message-container">
+            <h3 id="message">Don't Hesitate</h3>
+        </div>
+    </div>
+    <!-- Script -->
+    <script src="script.js"></script>
+</body>
+</html>
